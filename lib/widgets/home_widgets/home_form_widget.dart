@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasa_mission_control/widgets/global_widgets/semibold_text.dart';
+import 'package:nasa_mission_control/widgets/home_widgets/drop_down_field.dart';
 
 import '../../utils/colors.dart';
 import 'date_picker_function.dart';
@@ -89,7 +90,7 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SemiBoldText(name: "Destination Exoplanet: "),
-              
+              DropDownField(),
             ],
           ),
         ],
