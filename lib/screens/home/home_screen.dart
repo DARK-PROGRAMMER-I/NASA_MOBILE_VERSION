@@ -12,13 +12,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Container(
-              child: ,
-            ),
-            Column(
+      body: Stack(
+        children: [
+          SizedBox(
+            height: 875.h,
+            width: 375.w,
+            child: Image.asset("assets/png/background-large.jpg"),
+          ),
+          SingleChildScrollView(
+            child: Column(
               children: [
                 SizedBox(
                   height: 70.h,
@@ -44,8 +46,8 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
