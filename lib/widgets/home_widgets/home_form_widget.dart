@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasa_mission_control/widgets/global_widgets/semibold_text.dart';
 
 import '../../utils/colors.dart';
@@ -14,6 +15,8 @@ class HomeFormWidget extends StatefulWidget {
 
 class _HomeFormWidgetState extends State<HomeFormWidget> {
   TextEditingController _datCtr = TextEditingController();
+  TextEditingController _missionCtr = TextEditingController();
+  TextEditingController _rocketCtr = TextEditingController();
   DateTime? selectedTime ;
   @override
   void dispose() {
@@ -25,11 +28,14 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SemiBoldText(name: "Launch Date: "),
+              SizedBox(height: 5.h,),
               CustomTextField(
                 controller: _datCtr,
                 hintText: "${_datCtr.text.isNotEmpty ? _datCtr.text  : selectedTime != null? selectedTime?.toLocal().toString().substring(0, 10): 'yy/mm/dd'}",
@@ -49,11 +55,32 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
               ),
             ],
           ),
-
+          SizedBox(height: 10.h,),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
+              SemiBoldText(name: "Mission Name: "),
+              CustomTextField(
+                  controller: _missionCtr,
+                  hintText: "",
+                  onChanged: (val)=>{},
+                  onFieldSubmitted: (val)=>{},
+                  obscure: false
+              )
+            ],
+          ),
+          SizedBox(height: 10.h,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SemiBoldText(name: "Rocket Type: "),
+              CustomTextField(
+                  controller: _missionCtr,
+                  hintText: "Explorer IS1",
+                  onChanged: (val)=>{},
+                  onFieldSubmitted: (val)=>{},
+                  obscure: false
+              )
             ],
           )
 
