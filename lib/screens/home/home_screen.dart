@@ -15,9 +15,9 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: [
           SizedBox(
-            height: 875.h,
+            height: 1753.h,
             width: 375.w,
-            child: Image.asset("assets/png/background-large.jpg"),
+            child: Image.asset("assets/png/background-large.jpg", fit: BoxFit.cover,),
           ),
           SingleChildScrollView(
             child: Column(
@@ -36,10 +36,11 @@ class HomeScreen extends StatelessWidget {
                           width: 30.w,
                           child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
                       Container(
+                        padding: EdgeInsets.symmetric(horizontal: 5.w),
                           alignment: Alignment.topLeft,
                           height: 30.h,
                           width: 35.w,
-                          child: SvgPicture.asset("assets/svgs/target.svg")),
+                          child: SvgPicture.asset("assets/svgs/target.svg", color: AppColors.kIconColor,)),
                       BoldText(name: "NASA Mission Control", size: 20.sm,),
                     ],
                   ),

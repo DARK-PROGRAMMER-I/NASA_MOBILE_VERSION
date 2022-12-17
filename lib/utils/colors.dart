@@ -5,6 +5,7 @@ class AppColors{
   static const kSecondryColor = Color(0xFF26dafd);
   static const kButtonColor = Color(0xFF00ff00);
   static const kBackgroudColor = Color(0xff002b32);
+  static const kIconColor = Color(0x8D008491);
 
 
   static const kWhiteColor = Color(0xFFFFFFFF);
