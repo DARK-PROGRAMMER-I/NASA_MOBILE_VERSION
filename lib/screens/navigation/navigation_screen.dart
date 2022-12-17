@@ -35,19 +35,33 @@ class NavigationScreen extends StatelessWidget {
             backgroundColor: AppColors.kBackgroudColor,
             unselectedItemColor: AppColors.kWhiteColor,
             selectedItemColor: AppColors.kSecondryColor,
+            selectedLabelStyle: TextStyle(
+              fontSize: 15.sm ,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w600,
+              letterSpacing: 1.w,
+              color: AppColors.kSecondryColor,
+            ),
+            unselectedLabelStyle: TextStyle(
+              fontSize: 10.sm ,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w600,
+              letterSpacing: 1.w,
+              color: AppColors.kWhiteColor,
+            ),
             items: [
               BottomNavigationBarItem(
-                label: "Title",
+                label: "Launch",
                 icon: SvgPicture.asset(
                   "assets/svgs/launch.svg", height: 20.h, width: 20.w,),
               ),
               BottomNavigationBarItem(
-                label: "Title",
+                label: "Upcoming",
                 icon: SvgPicture.asset(
                   "assets/svgs/upcoming.svg", height: 20.h, width: 20.w,),
               ),
               BottomNavigationBarItem(
-                label: "Title",
+                label: "History",
                 icon: SvgPicture.asset(
                   "assets/svgs/history.svg", height: 20.h, width: 20.w,),
               ),
