@@ -15,11 +15,16 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: AppColors.kBackgroudColor,
         centerTitle: false,
         title: BoldText(name: "NASA Mission Control", size: 25.sm,),
-        leading: Container(
-            alignment: Alignment.topLeft,
-            height: 20.h,
-            width: 20.w,
-            child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
+        leading: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+                alignment: Alignment.topLeft,
+                height: 20.h,
+                width: 20.w,
+                child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
+          ],
+        ),
       ),
     );
   }
