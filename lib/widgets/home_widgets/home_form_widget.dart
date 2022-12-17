@@ -80,7 +80,13 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
           SemiBoldText(name: "Destination Exoplanet: "),
           DropDownField(),
           SizedBox(height: 30.h,),
-          LaunchButton()
+          Align(
+              alignment: Alignment.center,
+              child: InkWell(
+                  onTap: (){},
+                  child: LaunchButton(),
+              ),
+          )
         ],
       ),
     );
