@@ -35,6 +35,11 @@ class HomeScreen extends StatelessWidget {
                 BoldText(name: "NASA Mission Control", size: 20.sm,),
               ],
             ),
+          ),
+          SizedBox(height: 5.h,),
+          Divider(
+            color: AppColors.kSecondryColor,
+            height: 15.h,
           )
         ],
       ),
