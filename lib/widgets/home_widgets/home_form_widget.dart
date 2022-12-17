@@ -82,8 +82,16 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
                   obscure: false
               )
             ],
-          )
+          ),
 
+          SizedBox(height: 10.h,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SemiBoldText(name: "Destination Exoplanet: "),
+              
+            ],
+          ),
         ],
       ),
     );
