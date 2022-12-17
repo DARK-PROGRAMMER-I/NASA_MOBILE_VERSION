@@ -6,6 +6,7 @@ import 'package:nasa_mission_control/widgets/home_widgets/drop_down_field.dart';
 import '../../utils/colors.dart';
 import 'date_picker_function.dart';
 import 'date_text_field.dart';
+import 'launch_button.dart';
 
 class HomeFormWidget extends StatefulWidget {
   const HomeFormWidget({Key? key}) : super(key: key);
@@ -79,7 +80,7 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
           SemiBoldText(name: "Destination Exoplanet: "),
           DropDownField(),
           SizedBox(height: 30.h,),
-
+          LaunchButton()
         ],
       ),
     );
