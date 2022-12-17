@@ -18,7 +18,7 @@ class NavigationScreen extends StatelessWidget {
           ),
           Consumer<NavigationProvider>(
               builder: (context, navProvider, widget){
-                return
+                return navProvider.pages[navProvider.index];
               },
           )
         ],
