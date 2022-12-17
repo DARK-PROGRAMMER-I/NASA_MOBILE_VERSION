@@ -57,42 +57,29 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
             ],
           ),
           SizedBox(height: 10.h,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SemiBoldText(name: "Mission Name: "),
-              CustomTextField(
-                  controller: _missionCtr,
-                  hintText: "",
-                  onChanged: (val)=>{},
-                  onFieldSubmitted: (val)=>{},
-                  obscure: false
-              )
-            ],
+          SemiBoldText(name: "Mission Name: "),
+          CustomTextField(
+              controller: _missionCtr,
+              hintText: "",
+              onChanged: (val)=>{},
+              onFieldSubmitted: (val)=>{},
+              obscure: false
           ),
           SizedBox(height: 10.h,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SemiBoldText(name: "Rocket Type: "),
-              CustomTextField(
-                  controller: _missionCtr,
-                  hintText: "Explorer IS1",
-                  onChanged: (val)=>{},
-                  onFieldSubmitted: (val)=>{},
-                  obscure: false
-              )
-            ],
+          SemiBoldText(name: "Rocket Type: "),
+          CustomTextField(
+              controller: _missionCtr,
+              hintText: "Explorer IS1",
+              onChanged: (val)=>{},
+              onFieldSubmitted: (val)=>{},
+              obscure: false
           ),
 
           SizedBox(height: 10.h,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SemiBoldText(name: "Destination Exoplanet: "),
-              DropDownField(),
-            ],
-          ),
+          SemiBoldText(name: "Destination Exoplanet: "),
+          DropDownField(),
+          SizedBox(height: 30.h,),
+
         ],
       ),
     );

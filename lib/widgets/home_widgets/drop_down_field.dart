@@ -19,6 +19,17 @@ class _DropDownFieldState extends State<DropDownField> {
         color: AppColors.kWhiteColor,
         borderRadius: BorderRadius.circular(10.r),
       ),
+      child: DropdownButton(
+        isDense: false,
+        isExpanded: true,
+        // value: 'hola',
+          items: [
+            DropdownMenuItem(child: Text("Earth - The Real Thing"), value: "hola", ),
+            DropdownMenuItem(child: Text("Kapler Exo Planet"), value: "hola", ),
+            DropdownMenuItem(child: Text("The Solar Sun"), value: "hola", ),
+          ],
+          onChanged: (val){}
+      ),
     );
   }
 }
