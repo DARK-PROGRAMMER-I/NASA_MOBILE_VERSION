@@ -27,7 +27,7 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
         children: [
           CustomTextField(
             controller: _datCtr,
-            hintText: "${_datCtr.text.isNotEmpty ? _datCtr.text : 'Pick Date'}",
+            hintText: "${_datCtr.text.isNotEmpty ? _datCtr.text : 'dd/mm/yy'}",
             onChanged: (val){
             },
             onFieldSubmitted: (val){},

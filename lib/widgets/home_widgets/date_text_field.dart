@@ -33,7 +33,7 @@ class CustomTextField extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: 0.h, top: 5.h),
       //padding: EdgeInsets.only(left: 20.w, right: 10.w),
-      // height: 55.h,
+      height: 40.h,
       decoration: BoxDecoration(
         color: MediaQuery.of(context).platformBrightness == Brightness.light
             ? Color(0xFFF5F9FE)
