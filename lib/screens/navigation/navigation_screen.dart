@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nasa_mission_control/providers/navigation_provider/navigation_provider.dart';
+import 'package:nasa_mission_control/utils/colors.dart';
 import 'package:provider/provider.dart';
 
 class NavigationScreen extends StatelessWidget {
@@ -31,6 +32,9 @@ class NavigationScreen extends StatelessWidget {
               navProvider.getIndex(index);
             },
             currentIndex: navProvider.index,
+            backgroundColor: AppColors.kBackgroudColor,
+            unselectedItemColor: AppColors.kWhiteColor,
+            selectedItemColor: AppColors.kSecondryColor,
             items: [
               BottomNavigationBarItem(
                 label: "Title",
