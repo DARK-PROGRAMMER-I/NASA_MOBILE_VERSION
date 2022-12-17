@@ -24,7 +24,7 @@ class LaunchButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SemiBoldText(name: "Launch Mission   ✔")
+          SemiBoldText(name: "Launch Mission   ✔", color: AppColors.kButtonColor,)
         ],
       ),
     );
