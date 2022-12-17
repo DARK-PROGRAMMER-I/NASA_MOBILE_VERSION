@@ -10,44 +10,32 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: Stack(
+    return SingleChildScrollView(
+      child: Column(
         children: [
           SizedBox(
-            height: 1753.h,
-            width: 375.w,
-            child: Image.asset("assets/png/background-large.jpg", fit: BoxFit.cover,),
+            height: 70.h,
           ),
-          SingleChildScrollView(
-            child: Column(
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 70.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          alignment: Alignment.topLeft,
-                          height: 30.h,
-                          width: 30.w,
-                          child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.w),
-                          alignment: Alignment.topLeft,
-                          height: 30.h,
-                          width: 35.w,
-                          child: SvgPicture.asset("assets/svgs/target.svg", color: AppColors.kIconColor,)),
-                      BoldText(name: "NASA Mission Control", size: 20.sm,),
-                    ],
-                  ),
-                )
+                Container(
+                    alignment: Alignment.topLeft,
+                    height: 30.h,
+                    width: 30.w,
+                    child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
+                Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5.w),
+                    alignment: Alignment.topLeft,
+                    height: 30.h,
+                    width: 35.w,
+                    child: SvgPicture.asset("assets/svgs/target.svg", color: AppColors.kIconColor,)),
+                BoldText(name: "NASA Mission Control", size: 20.sm,),
               ],
             ),
-          ),
+          )
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nasa_mission_control/providers/navigation_provider/navigation_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -17,11 +18,38 @@ class NavigationScreen extends StatelessWidget {
             child: Image.asset("assets/png/background-large.jpg", fit: BoxFit.cover,),
           ),
           Consumer<NavigationProvider>(
-              builder: (context, navProvider, widget){
-                return navProvider.pages[navProvider.index];
-              },
+            builder: (context, navProvider, child) {
+              return navProvider.pages[navProvider.index];
+            },
           )
         ],
+      ),
+      bottomNavigationBar: Consumer<NavigationProvider>(
+        builder: (context, navProvider, child) {
+          return BottomNavigationBar(
+            onTap: (int index) {
+              navProvider.getIndex(index);
+            },
+            currentIndex: navProvider.index,
+            items: [
+              BottomNavigationBarItem(
+                label: "Title",
+                icon: SvgPicture.asset(
+                  "assets/svgs/launch.svg", height: 20.h, width: 20.w,),
+              ),
+              BottomNavigationBarItem(
+                label: "Title",
+                icon: SvgPicture.asset(
+                  "assets/svgs/upcoming.svg", height: 20.h, width: 20.w,),
+              ),
+              BottomNavigationBarItem(
+                label: "Title",
+                icon: SvgPicture.asset(
+                  "assets/svgs/history.svg", height: 20.h, width: 20.w,),
+              ),
+            ],
+          );
+        }
       ),
     );
   }
