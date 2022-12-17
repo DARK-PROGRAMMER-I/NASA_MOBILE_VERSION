@@ -11,18 +11,39 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.kBackgroudColor,
-        centerTitle: false,
-        title: BoldText(name: "NASA Mission Control", size: 25.sm,),
-        leading: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+
+      body: SingleChildScrollView(
+        child: Stack(
           children: [
             Container(
-                alignment: Alignment.topLeft,
-                height: 20.h,
-                width: 20.w,
-                child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
+              child: ,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: 70.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                          alignment: Alignment.topLeft,
+                          height: 30.h,
+                          width: 30.w,
+                          child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
+                      Container(
+                          alignment: Alignment.topLeft,
+                          height: 30.h,
+                          width: 35.w,
+                          child: SvgPicture.asset("assets/svgs/target.svg")),
+                      BoldText(name: "NASA Mission Control", size: 20.sm,),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
