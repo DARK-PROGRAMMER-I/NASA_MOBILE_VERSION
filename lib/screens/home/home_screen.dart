@@ -27,12 +27,14 @@ class HomeScreen extends StatelessWidget {
                     height: 30.h,
                     width: 30.w,
                     child: SvgPicture.asset("assets/svgs/planet_icon.svg")),
-                MyRotationAnimation(animationWidget: Container(
+                MyRotationAnimation(
+                  animationWidget: Container(
                     padding: EdgeInsets.symmetric(horizontal: 5.w),
                     alignment: Alignment.topLeft,
                     height: 30.h,
                     width: 35.w,
-                    child: SvgPicture.asset("assets/svgs/target.svg", color: AppColors.kIconColor,))
+                    child: SvgPicture.asset("assets/svgs/target.svg", color: AppColors.kIconColor,),
+                  )
                 ),
                 BoldText(name: "NASA Mission Control", size: 20.sm,),
               ],

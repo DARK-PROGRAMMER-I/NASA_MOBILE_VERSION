@@ -20,8 +20,15 @@ class _MyRotationAnimationState extends State<MyRotationAnimation>
     // Initialize the animation controller
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 500),
-    );
+      duration: Duration(seconds: 1),
+    )
+      ..forward()
+      ..addListener(() {
+        if (_animationController.isCompleted) {
+          _animationController.repeat();
+        }
+      })
+    ;
 
     // Set up the animation using a CurvedAnimation
     _animation = CurvedAnimation(
