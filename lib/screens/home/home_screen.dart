@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.only(left: 10.w),
                     child: SemiBoldText(name: "*  Effective stellar flux > 0.36 times Earth's value and < 1.11 times Earth's value"),
                   ),
-                  SizedBox(height: 10.h,),
+                  SizedBox(height: 30.h,),
                   HomeFormWidget(),
                 ],
               ),

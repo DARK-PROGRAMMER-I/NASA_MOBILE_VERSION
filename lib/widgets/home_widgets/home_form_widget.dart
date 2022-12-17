@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nasa_mission_control/widgets/global_widgets/semibold_text.dart';
 
 import '../../utils/colors.dart';
 import 'date_picker_function.dart';
@@ -13,7 +14,7 @@ class HomeFormWidget extends StatefulWidget {
 
 class _HomeFormWidgetState extends State<HomeFormWidget> {
   TextEditingController _datCtr = TextEditingController();
-
+  DateTime? selectedTime ;
   @override
   void dispose() {
     // TODO: implement dispose
@@ -25,21 +26,36 @@ class _HomeFormWidgetState extends State<HomeFormWidget> {
     return Form(
       child: Column(
         children: [
-          CustomTextField(
-            controller: _datCtr,
-            hintText: "${_datCtr.text.isNotEmpty ? _datCtr.text : 'dd/mm/yy'}",
-            onChanged: (val){
-            },
-            onFieldSubmitted: (val){},
-            obscure: false,
-            leadingIcon: IconButton(
-              onPressed: ()async{
-                DateTime time = await datePicker(context: context);
-                print(time.toLocal().toUtc());
-              },
-              icon: Icon(Icons.calendar_month, color: AppColors.kSecondryColor,),
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SemiBoldText(name: "Launch Date: "),
+              CustomTextField(
+                controller: _datCtr,
+                hintText: "${_datCtr.text.isNotEmpty ? _datCtr.text  : selectedTime != null? selectedTime?.toLocal().toString().substring(0, 10): 'yy/mm/dd'}",
+                onChanged: (val){
+                },
+                onFieldSubmitted: (val){},
+                obscure: false,
+                leadingIcon: IconButton(
+                  onPressed: ()async{
+                    DateTime time = await datePicker(context: context);
+                    setState(() {
+                      selectedTime = time;
+                    });
+                  },
+                  icon: Icon(Icons.calendar_month, color: AppColors.kSecondryColor,),
+                ),
+              ),
+            ],
           ),
+
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+
+            ],
+          )
 
         ],
       ),

@@ -51,7 +51,7 @@ class CustomTextField extends StatelessWidget {
               fontSize: 16.sp,
               fontWeight: FontWeight.w500),
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
+            contentPadding: EdgeInsets.only(left: 30.w, right: 20.w),
             suffixIcon: leadingIcon ?? SizedBox(),
             hintText: hintText,
             hintStyle: GoogleFonts.poppins(
