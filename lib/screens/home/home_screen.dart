@@ -36,10 +36,11 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 5.h,),
-          Divider(
+          SizedBox(height: 10.h,),
+          Container(
+            height: 2.h,
+            width: 375.w,
             color: AppColors.kSecondryColor,
-            height: 15.h,
           )
         ],
       ),
