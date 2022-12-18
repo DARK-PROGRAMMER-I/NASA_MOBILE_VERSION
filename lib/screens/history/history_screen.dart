@@ -7,8 +7,8 @@ import '../../widgets/global_widgets/bold_text.dart';
 import '../../widgets/global_widgets/circular_animation.dart';
 import '../../widgets/global_widgets/semibold_text.dart';
 
-class UpcommingScreen extends StatelessWidget {
-  const UpcommingScreen({Key? key}) : super(key: key);
+class HistoryScreen extends StatelessWidget {
+  const HistoryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class UpcommingScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: 20.h,),
-                  SemiBoldText(name: "Upcoming missions including both SpaceX launches and newly scheduled Zero to Mastery rockets.", size: 14,),
+                  SemiBoldText(name: "History of mission launches including SpaceX launches starting from the year 2006.", size: 14,),
                   SizedBox(height: 50.h,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_mission_control/screens/home/home_screen.dart';
 
+import '../../screens/history/history_screen.dart';
 import '../../screens/upcoming/upcoming_screen.dart';
 
 class NavigationProvider with ChangeNotifier{
@@ -14,6 +15,6 @@ class NavigationProvider with ChangeNotifier{
   List<Widget> pages= [
     HomeScreen(),
     UpcommingScreen(),
-    HomeScreen()
+    HistoryScreen()
   ];
 }
